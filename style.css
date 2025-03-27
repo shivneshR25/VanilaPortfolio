@@ -1,0 +1,34 @@
+/* general */
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Lora", serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+p{
+    color: rgb(85,85,85);
+}
+
+a, .btn{
+    transition: all 300ms ease;
+}
+
+nav,.nav-links {
+    display: flex;
+
+}
+
+nav{
+    justify-content: space-around;
+    align-items: center;
+    height: 17vh;
+}
