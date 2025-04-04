@@ -6,6 +6,8 @@
     <title>Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="mediaqueries.css">
+    <link rel="stylesheet" href="mode.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
     <nav id="desktop-nav">
@@ -17,6 +19,9 @@
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
+        </div>
+        <div class="logo">
+                <img src="./assets/dark.svg" alt="darkmode" class="icon" id="dark-mode-icon" onclick="switchdark()">
         </div>
     </nav>
 
@@ -65,7 +70,7 @@
         <h1 class="title">About Me</h1>
         <div class="section-container">
             <div class="section_pic-container">
-                <img src="./assets/about-pic.png" alt="profie" class="about-pic">
+                <img src="./assets/about-pic.svg" alt="profie" class="about-pic">
             </div>
             <div class="about-details-container">
                 <div class="about-containers">
@@ -189,7 +194,7 @@
 
     <section id="contact">
         <p class="section__text__p1">Get in Touch</p>
-        <h1 class="title">Contact Me</h1>
+        <h1 class="title">Contact Me </h1>
         <div class="contact-upper-container">
             <div class="contact-info-container">
                 <img src="./assets/email.png" alt="email" class="icon contact-icon email-icon" >
@@ -204,8 +209,13 @@
 
     <footer>
         <nav>
-            <div>
-                
+            <div class="nav-links-container">
+                <ul class="nav-links">
+                    <li><a href="#profile">Profile</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Experience</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                </ul>
             </div>
         </nav>
     </footer>

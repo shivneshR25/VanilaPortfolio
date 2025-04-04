@@ -1,0 +1,20 @@
+body {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dark-mode {
+    background-color: #121212;
+    color: cornsilk;
+}
+
+.dark-mode a {
+    color: #00A8E8;
+}
+
+.dark-mode button {
+    background: #FF6B6B;
+    color: white;
+    border: 1px solid #333333;
+}
+
+

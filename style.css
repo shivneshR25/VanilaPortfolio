@@ -1,12 +1,15 @@
 /* general */
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
 
+
+
 *{
     margin: 0;
     padding: 0;
 }
 
 body {
+    background-color:cornsilk;
     font-family: "Lora", serif;
 }
 
@@ -295,7 +298,7 @@ section {
 {
     padding: 1.5rem;
     flex: 1;
-    background:white;
+    background:cornsilk;
     border-radius: 2rem;
     border: rgb(53,53,53) 0.1rem solid;
     border-color: rgb(163,163,163);
