@@ -9,20 +9,19 @@ function toggleMenu()
 let currentTheme = 'light'; // or 'dark'
 
 function toggleMode() {
-    // Toggle the theme folder
-    currentTheme = currentTheme === 'light' ? 'dark' : 'light';
+    const body = document.body;
+    const isDark = body.classList.toggle('dark-mode'); // toggles the class
 
-    // Select all icons
-    const allIcons = document.querySelectorAll('.icon');
+    const themeFolder = isDark ? 'dark' : 'light';
 
-    // Update each icon's src
-    allIcons.forEach(icon => {
-        const fileName = icon.getAttribute('data-icon');
-        if (fileName) {
-            icon.src = `./assets/${currentTheme}/${fileName}`;
-        }
+    // Update all icons
+    document.querySelectorAll('.icon').forEach(icon => {
+        const fileName = icon.src.split('/').pop(); // gets "home.svg", etc.
+        icon.src = `./assets/${themeFolder}/${fileName}`;
     });
-}
 
+    // Optional: Remember preference
+    localStorage.setItem('theme', themeFolder);
+}
 
 
