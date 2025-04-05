@@ -6,21 +6,24 @@ function toggleMenu()
     icon.classList.toggle("open");
 }
 
-let currentTheme = 'light'; // or 'dark'
+// let currentTheme = 'light'; // or 'dark'
 
 function toggleMode() {
     const body = document.body;
-    const isDark = body.classList.toggle('dark-mode'); // toggles the class
-
+    const isDark = body.classList.toggle('dark-mode');
     const themeFolder = isDark ? 'dark' : 'light';
 
-    // Update all icons
     document.querySelectorAll('.icon').forEach(icon => {
-        const fileName = icon.src.split('/').pop(); // gets "home.svg", etc.
-        icon.src = `./assets/${themeFolder}/${fileName}`;
+        const src = icon.src; // full URL
+        const fileName = src.substring(src.lastIndexOf('/') + 1); // e.g. "home.svg"
+    
+        const updatedFile = isDark
+            ? fileName.replace('.svg', '1.svg')
+            : fileName.replace('1.svg', '.svg'); // important: back to base
+    
+        icon.src = `./assets/${updatedFile}`;
     });
 
-    // Optional: Remember preference
     localStorage.setItem('theme', themeFolder);
 }
 
