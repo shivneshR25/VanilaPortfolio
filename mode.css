@@ -17,4 +17,8 @@ body {
     border: 1px solid #333333;
 }
 
+.dark-mode h3, h2{
+    color: #121212;
+}
+
 

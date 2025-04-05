@@ -6,18 +6,23 @@ function toggleMenu()
     icon.classList.toggle("open");
 }
 
+let currentTheme = 'light'; // or 'dark'
 
-function switchdark() {
-    const body = document.body;
-    const icon = document.getElementById("dark-mode-icon");
+function toggleMode() {
+    // Toggle the theme folder
+    currentTheme = currentTheme === 'light' ? 'dark' : 'light';
 
-    body.classList.toggle("dark-mode");
+    // Select all icons
+    const allIcons = document.querySelectorAll('.icon');
 
-    if (body.classList.contains("dark-mode")) {
-        localStorage.setItem("darkMode", "enabled");
-        icon.src = "./assets/light.svg"; 
-    } else {
-        localStorage.setItem("darkMode", "disabled");
-        icon.src = "./assets/dark.svg"; 
-    }
+    // Update each icon's src
+    allIcons.forEach(icon => {
+        const fileName = icon.getAttribute('data-icon');
+        if (fileName) {
+            icon.src = `./assets/${currentTheme}/${fileName}`;
+        }
+    });
 }
+
+
+
