@@ -18,8 +18,8 @@ function toggleMode() {
         const fileName = src.substring(src.lastIndexOf('/') + 1); // e.g. "home.svg"
     
         const updatedFile = isDark
-            ? fileName.replace('.svg', '1.svg')
-            : fileName.replace('1.svg', '.svg'); // important: back to base
+            ? fileName.replace('.png', '1.png')
+            : fileName.replace('1.png', '.png'); // important: back to base
     
         icon.src = `./assets/${updatedFile}`;
     });
