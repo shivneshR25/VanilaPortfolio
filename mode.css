@@ -4,7 +4,8 @@ body {
 
 .dark-mode {
     background-color: #121212;
-    color: cornsilk;
+    /* color: cornsilk; */
+    color: #f8f0dc;
 }
 
 .dark-mode a {
