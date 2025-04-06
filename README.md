@@ -22,11 +22,17 @@ This is a basic **personal portfolio website** built using **HTML**, **CSS**, an
 ```
 portfolio/
 ├── index.html
-├── style.css
-├── script.js
-└── assets/
-    ├── images/
-    └── icons/
+├── scripts/
+│   └── script.js
+├── styles/
+│   ├── style.css
+│   ├── mediaqueries.css
+│   └── mode.css
+├── assets/
+│   ├── resume.pdf
+│   ├── darkmode/
+│   └── lightmode/
+
 ```
 
 
