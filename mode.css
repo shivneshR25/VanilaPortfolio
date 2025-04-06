@@ -23,3 +23,7 @@ body {
 }
 
 
+.dark-mode .hamburger-icon span{
+    background-color: cornsilk;
+}
+
